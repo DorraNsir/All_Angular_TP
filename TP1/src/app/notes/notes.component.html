@@ -1,0 +1,25 @@
+<input [(ngModel)]="newNote" placeholder="add"/>
+    
+<br/>
+<button (click)="addNote()" class="btn btn-primary">Add</button>
+<br/>
+<button (click)="List()" class="">List</button>
+<br/>
+<button (click)="addSubnote()" class="">addSubnote</button>
+
+<ul class="list-group" style="list-style: none;">
+
+<li style=" width: 200px;margin: 5px;"  class="list-group-item" 
+[ngStyle]="{'color':generateColor()}"
+*ngFor="let n of notes ;let i =index">{{n}} 
+<button (click)="deleteNote(i)" style="border-radius: 50px;background-color: rgb(216, 7, 7); border: none;color: azure; position: relative;left:80%" 
+class="btn btn-danger">X</button>
+<ul *ngIf="i === subNote.length-1">
+<li style="border:1px solid red ; width: 200px;margin: 5px;"  class="list-group-item" 
+[ngStyle]="{'color':generateColor()}"
+*ngFor="let n of subNote ;let j =index">{{n}} 
+</li>
+</ul>
+</li>
+
+</ul>

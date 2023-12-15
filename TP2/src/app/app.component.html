@@ -1,0 +1,14 @@
+<html>
+    <head>
+  
+    </head>
+    <body>
+        <div *ngFor="let n of cars ;let j =index" style="padding: 10px;">
+            <a [routerLink]="'/car/'+n.id" >{{n.model}}</a>
+            <router-outlet></router-outlet>
+        </div>
+      <div>
+       
+      </div>
+    </body>
+   </html>

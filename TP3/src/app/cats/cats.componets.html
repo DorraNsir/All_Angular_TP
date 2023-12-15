@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="padding-top: 70px;">
+        <div class="container">
+        <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let cat of cats">
+        <td>{{ cat.id }}</td>
+        <td>{{ cat.name }}</td>
+        <td>
+            <!-- <button class="btn btn-info" (click)="showDetails=true;
+            getCatById(cat.id)"><i class="fa fa-eye"></i> View</button> -->
+            <a class="btn btn-info" routerLink="/details/{{cat.id}}"><i class="fa
+                fa-eye"></i> View </a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-success" routerLink="/details/{{cat.id}}"><i class="fa-solid fa-pen"></i> Edit </a>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        <app-cat-details *ngIf="showDetails" [cat]="selectedCat">
+        </app-cat-details>
+        </div>
+        </div>
+</body>
+</html>

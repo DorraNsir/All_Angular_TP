@@ -1,0 +1,12 @@
+<h2>Edit Etudiant</h2>
+
+<form (submit)="updateEtudiant()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" [(ngModel)]="etudiant.name" required>
+  <label for="name">statu:</label>
+  <input type="text" id="name" name="name" [(ngModel)]="etudiant.status" required>
+  <br/>
+  <button type="submit" routerLink="edit/etudiant.id">Update Etudiant</button>
+</form>
+
+<button routerLink="/liste">Back to List</button>

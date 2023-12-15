@@ -1,0 +1,33 @@
+<!-- etudiant-list.component.html -->
+<div class="container mt-3">
+  <h2>Etudiant List</h2>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let etudiant of etudiants">
+        <td>{{ etudiant.id }}</td>
+        <td>{{ etudiant.nom }}</td>
+        <td>{{ etudiant.prenom}}</td>
+        <td>{{ etudiant.age }}</td>
+        <td>{{ etudiant.email }}</td>
+        <td>
+          <button class="btn btn-warning" routerLink="edit/{{etudiant.id}}"><i class="fa-solid fa-pen"></i></button>
+          <button class="btn btn-danger" (click)="onDelete(etudiant.id)"><i class="fa-solid fa-x"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary" routerLink="/add">Add Etudiant</button>
+</div>
+

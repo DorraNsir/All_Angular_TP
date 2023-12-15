@@ -1,0 +1,27 @@
+<h2>Add Etudiant</h2>
+
+<form (submit)="addEtudiant()" class="container mt-3">
+  <div class="form-group">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" [(ngModel)]="etudiant.nom" required class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="prenom">Prenom:</label>
+    <input type="text" id="prenom" name="prenom" [(ngModel)]="etudiant.prenom" required class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="etudiant.email" required class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" [(ngModel)]="etudiant.age" required class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Etudiant</button>
+</form>
+
+<button routerLink="/liste" class="btn btn-secondary mt-2">Back to List</button>

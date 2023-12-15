@@ -1,0 +1,46 @@
+ <html>
+  <head>
+
+  </head>
+  <body>
+    <app-menu></app-menu>
+    <router-outlet></router-outlet>
+  </body>
+ </html>
+ <!-- index:reserved word -->
+
+ <!-- 
+  **************ex4***************
+  <input #input type="text" (input)="textInput($event)" value=""/>
+ <hr>
+ Upper-Case:{{upperCase}}
+ <br/>
+ Lower-Case:{{lowerCase}} -->
+     <!-- 
+      **************ex3***************
+      <p>Foreground:<input [(ngModel)]="fg"/></p>
+     <p>Foreground:<input [(ngModel)]="bg"/></p>
+     <div [ngStyle]="{'color':fg,'background-color':bg,'padding':'5px'}">
+       Zone de text
+     </div> -->
+     <!-- 
+      *************************ex2***********
+      <table>
+      <tr *ngFor="let car of cars">
+        <td>{{car.make}}</td>
+        <td>{{car.model}}</td>
+        <td><button (click)="showCar(car)">Click me!</button></td>
+      </tr>
+    </table> -->
+    <!-- 
+      ***********************ex1***********************
+      <h1>
+      {{title}}
+      <p>
+        length:{{title.length}}
+      </p>
+      <p>Reversed:{{getReversed(title)}}</p>
+
+    </h1> -->
+      
+   
